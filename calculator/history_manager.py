@@ -50,3 +50,23 @@ class HistoryManagerFacade:
             logging.info("Cleared history file.")
         except Exception as e:
             logging.error(f"Failed to clear history: {e}")
+
+    def save_history(self):
+        """Save the current history"""
+        try:
+            df = self.load_history()
+            df.to_csv(self.filepath, index=False)
+            logging.info("History saved.")
+        except Exception as e:
+            logging.error(f"Failed to save history: {e}")
+
+    def delete_history(self):
+        """Delete the history file"""
+        try:
+            if os.path.exists(self.filepath):
+                os.remove(self.filepath)
+                logging.info("History file deleted.")
+            else:
+                logging.warning("No history file found to delete.")
+        except Exception as e:
+            logging.error(f"Failed to delete history: {e}")

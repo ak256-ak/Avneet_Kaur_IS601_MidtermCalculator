@@ -5,13 +5,14 @@ import sys
 from history_manager import HistoryManagerFacade
 
 # Set up logging
-LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
-logging.basicConfig(filename='calculator.log', level=LOG_LEVEL, 
+LOG_LEVEL = os.getenv("LOG_LEVEL", "DEBUG").upper()
+LOG_FILE = os.getenv("LOG_FILE", "calculator.log")
+logging.basicConfig(filename=LOG_FILE, level=LOG_LEVEL, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 class OperationStrategy:
     """Strategy Pattern: Defines the operation interface"""
-    def execute(self, a, b):
+    def execute(self, a, b=None):
         raise NotImplementedError("This method should be overridden.")
 
 class Calculator:
@@ -24,8 +25,11 @@ class Calculator:
 
     def load_plugins(self):
         """Factory Pattern: Dynamically load plugins from 'plugins' folder"""
-        plugins_folder = 'plugins'
+        plugins_folder = 'calculator/plugins'
         sys.path.insert(0, plugins_folder)
+        
+        if not os.path.exists(plugins_folder):
+            os.makedirs(plugins_folder)
         
         for plugin in os.listdir(plugins_folder):
             if plugin.endswith('.py') and plugin != '__init__.py':
@@ -46,11 +50,24 @@ class Calculator:
 
         while True:
             command = input("\nEnter operation: ").strip().lower()
+            
             if command == 'exit':
                 print("Exiting the calculator. Goodbye!")
                 break
             elif command == 'history':
                 self.show_history()
+                continue
+            elif command == 'save_history':
+                self.history_manager.save_history()
+                print("History saved.")
+                continue
+            elif command == 'clear_history':
+                self.history_manager.clear_history()
+                print("History cleared.")
+                continue
+            elif command == 'delete_history':
+                self.history_manager.delete_history()
+                print("History deleted.")
                 continue
 
             if command not in self.plugins:
@@ -59,14 +76,17 @@ class Calculator:
 
             try:
                 a = float(input("Enter the first number: "))
-                b = float(input("Enter the second number: "))
+                b = None
+                if command not in ['square', 'squareroot', 'cube']:
+                    b = float(input("Enter the second number: "))
+
                 result = self.plugins[command].execute(a, b)
                 print(f"Result: {result}")
                 self.history_manager.add_entry(command, a, b, result)
                 logging.info(f"Operation: {command}, Operands: {a}, {b}, Result: {result}")
-            except ValueError:
-                print("Invalid input. Please enter numeric values.")
-                logging.error("Invalid numeric input.")
+            except ValueError as ve:
+                print(f"Error: {ve}")
+                logging.error(f"Value error: {ve}")
             except Exception as e:
                 print(f"Error: {e}")
                 logging.error(f"Exception occurred: {e}")
@@ -86,8 +106,9 @@ class Calculator:
 if __name__ == "__main__":
     calculator = Calculator()
     calculator.repl()
+
 '''
-This is a test for the new branch 
+This is a test for the new repo 
 
 
 '''
