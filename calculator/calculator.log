@@ -1,0 +1,16 @@
+2024-10-25 19:16:49,099 - INFO - Loaded plugin: add
+2024-10-25 19:16:49,099 - INFO - Loaded plugin: subtract
+2024-10-25 19:16:49,100 - INFO - Loaded plugin: multiply
+2024-10-25 19:16:49,100 - INFO - Loaded plugin: squareroot
+2024-10-25 19:16:49,100 - INFO - Loaded plugin: divide
+2024-10-25 19:16:49,101 - INFO - Loaded plugin: exponent
+2024-10-25 19:16:49,101 - INFO - Loaded plugin: cube
+2024-10-25 19:16:49,101 - INFO - Loaded plugin: square
+2024-10-25 19:16:53,911 - INFO - Added history entry: add, 1.0, 1.0, 2.0
+2024-10-25 19:16:53,911 - INFO - Operation: add, Operands: 1.0, 1.0, Result: 2.0
+2024-10-25 19:17:00,687 - INFO - Added history entry: subtract, 10.0, 1.0, 9.0
+2024-10-25 19:17:00,688 - INFO - Operation: subtract, Operands: 10.0, 1.0, Result: 9.0
+2024-10-25 19:18:32,630 - INFO - Added history entry: divide, 100.0, 2.0, 50.0
+2024-10-25 19:18:32,630 - INFO - Operation: divide, Operands: 100.0, 2.0, Result: 50.0
+2024-10-25 19:18:46,222 - INFO - Added history entry: exponent, 1.0, 2.0, 1.0
+2024-10-25 19:18:46,223 - INFO - Operation: exponent, Operands: 1.0, 2.0, Result: 1.0

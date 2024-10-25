@@ -123,9 +123,10 @@ def test_delete_history_exception(monkeypatch, history_manager):
 '''
 
 '''
-Testing the below code to see if it helps with coverage 
+Testing the below code give 92% covergae but i aslo get a error 
 '''
 
+'''
 import pytest
 import os
 import pandas as pd
@@ -181,6 +182,74 @@ def test_clear_history_error(monkeypatch, history_manager):
 
     monkeypatch.setattr(pd.DataFrame, 'to_csv', mock_to_csv)
     with pytest.raises(IOError, match="Simulated IOError"):
+        history_manager.clear_history()
+
+def test_delete_history(history_manager):
+    """Test deleting the history file"""
+    history_manager.add_entry('add', 1, 2, 3)
+    history_manager.delete_history()
+    assert not os.path.exists('test_history.csv')
+'''
+
+'''
+This below code is to see if that error can be fixd 
+
+'''
+import pytest
+import os
+import pandas as pd
+from history_manager import HistoryManagerFacade
+
+@pytest.fixture
+def history_manager():
+    """Fixture for initializing the history manager"""
+    return HistoryManagerFacade('test_history.csv')
+
+def test_add_entry(history_manager):
+    """Test adding an entry to history"""
+    history_manager.add_entry('add', 1, 2, 3)
+    df = history_manager.load_history()
+    assert not df.empty
+    assert 'add' in df['Operation'].values
+
+def test_clear_history(history_manager):
+    """Test clearing history"""
+    history_manager.add_entry('add', 1, 2, 3)
+    history_manager.clear_history()
+    df = history_manager.load_history()
+    assert df.empty
+
+def test_load_history_empty(history_manager):
+    """Test loading history when file is empty"""
+    history_manager.clear_history()
+    df = history_manager.load_history()
+    assert df.empty
+
+def test_load_history_error(monkeypatch, history_manager):
+    """Simulate error when loading history"""
+    def mock_read_csv(*args, **kwargs):
+        raise pd.errors.EmptyDataError("Simulated error")
+
+    monkeypatch.setattr(pd, 'read_csv', mock_read_csv)
+    with pytest.raises(pd.errors.EmptyDataError, match="Simulated error"):
+        history_manager.load_history()
+
+def test_save_history_error(monkeypatch, history_manager):
+    """Simulate error when saving history"""
+    def mock_to_csv(*args, **kwargs):
+        raise OSError("Simulated IOError")
+
+    monkeypatch.setattr(pd.DataFrame, 'to_csv', mock_to_csv)
+    with pytest.raises(OSError, match="Simulated IOError"):
+        history_manager.save_history()
+
+def test_clear_history_error(monkeypatch, history_manager):
+    """Simulate error when clearing history"""
+    def mock_to_csv(*args, **kwargs):
+        raise OSError("Simulated IOError")
+
+    monkeypatch.setattr(pd.DataFrame, 'to_csv', mock_to_csv)
+    with pytest.raises(OSError, match="Simulated IOError"):
         history_manager.clear_history()
 
 def test_delete_history(history_manager):
