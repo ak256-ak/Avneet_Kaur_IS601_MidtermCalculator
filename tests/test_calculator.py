@@ -1,5 +1,11 @@
 import pytest
-from calculator.calculator import Calculator
+import sys
+import os
+
+# Add the calculator directory to the system path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'calculator')))
+
+from calculator import Calculator
 
 @pytest.fixture
 def calculator():
@@ -36,6 +42,10 @@ def test_exponent(calculator):
 def test_squareroot(calculator):
     result = calculator.plugins['squareroot'].execute(9)
     assert result == 3
+
+def test_squareroot_negative(calculator):
+    with pytest.raises(ValueError, match="Cannot take the square root of a negative number."):
+        calculator.plugins['squareroot'].execute(-9)
 
 def test_cube(calculator):
     result = calculator.plugins['cube'].execute(3)

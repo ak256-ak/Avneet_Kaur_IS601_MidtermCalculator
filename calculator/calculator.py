@@ -10,11 +10,6 @@ LOG_FILE = os.getenv("LOG_FILE", "calculator.log")
 logging.basicConfig(filename=LOG_FILE, level=LOG_LEVEL, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-class OperationStrategy:
-    """Strategy Pattern: Defines the operation interface"""
-    def execute(self, a, b=None):
-        raise NotImplementedError("This method should be overridden.")
-
 class Calculator:
     """Main Calculator class with REPL and plugin integration"""
 

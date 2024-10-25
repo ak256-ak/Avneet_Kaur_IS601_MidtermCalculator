@@ -1,6 +1,11 @@
 import pytest
 import os
-from calculator.history_manager import HistoryManagerFacade
+import sys
+
+# Add the calculator directory to the system path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'calculator')))
+
+from history_manager import HistoryManagerFacade
 
 @pytest.fixture
 def history_manager():
@@ -9,6 +14,7 @@ def history_manager():
 def test_add_entry(history_manager):
     history_manager.add_entry('add', 3, 2, 5)
     df = history_manager.load_history()
+    assert not df.empty
     assert df.iloc[-1]['Operation'] == 'add'
     assert df.iloc[-1]['Operand1'] == 3
     assert df.iloc[-1]['Operand2'] == 2
