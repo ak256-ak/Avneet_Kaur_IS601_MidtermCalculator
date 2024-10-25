@@ -42,7 +42,7 @@ def test_delete_history(history_manager):
 '''
 
 ''' The below code is better since it took covergae from 68 to 83'''
-
+'''
 import pytest
 import os
 import pandas as pd
@@ -96,6 +96,81 @@ def test_clear_history(history_manager):
 
 def test_save_history_exception(monkeypatch, history_manager):
     """Simulate an error while saving history"""
+    def mock_to_csv(*args, **kwargs):
+        raise IOError("Simulated IOError")
+
+    monkeypatch.setattr(pd.DataFrame, 'to_csv', mock_to_csv)
+    try:
+        history_manager.save_history()
+    except Exception as e:
+        assert str(e) == "Simulated IOError"
+
+def test_delete_history(history_manager):
+    """Test deleting history file"""
+    history_manager.delete_history()
+    assert not os.path.exists('test_history.csv')
+
+def test_delete_history_exception(monkeypatch, history_manager):
+    """Simulate an error while deleting history"""
+    def mock_remove(*args, **kwargs):
+        raise OSError("Simulated OSError")
+
+    monkeypatch.setattr(os, 'remove', mock_remove)
+    try:
+        history_manager.delete_history()
+    except Exception as e:
+        assert str(e) == "Simulated OSError"
+'''
+
+'''
+Testing the below code to see if it helps with coverage 
+'''
+
+import pytest
+import os
+import pandas as pd
+from history_manager import HistoryManagerFacade
+
+@pytest.fixture
+def history_manager():
+    """Fixture for initializing the history manager"""
+    return HistoryManagerFacade('test_history.csv')
+
+def test_initialize_file(history_manager):
+    """Test file initialization when file doesn't exist"""
+    if os.path.exists('test_history.csv'):
+        os.remove('test_history.csv')  # Remove if exists
+    history_manager._initialize_file()
+    assert os.path.exists('test_history.csv')
+
+def test_add_entry(history_manager):
+    """Test adding an entry to history"""
+    history_manager.add_entry('add', 2, 3, 5)
+    df = history_manager.load_history()
+    assert not df.empty
+    assert df.iloc[-1]['Operation'] == 'add'
+    assert df.iloc[-1]['Operand1'] == 2
+    assert df.iloc[-1]['Operand2'] == 3
+    assert df.iloc[-1]['Result'] == 5
+
+def test_load_history_empty_file(monkeypatch, history_manager):
+    """Simulate loading history from an empty file"""
+    def mock_read_csv(*args, **kwargs):
+        raise pd.errors.EmptyDataError("No data")
+    
+    monkeypatch.setattr(pd, 'read_csv', mock_read_csv)
+    df = history_manager.load_history()
+    assert df.empty
+
+def test_clear_history(history_manager):
+    """Test clearing history"""
+    history_manager.add_entry('subtract', 5, 2, 3)
+    history_manager.clear_history()
+    df = history_manager.load_history()
+    assert df.empty
+
+def test_save_history_no_file(monkeypatch, history_manager):
+    """Simulate saving history when file does not exist"""
     def mock_to_csv(*args, **kwargs):
         raise IOError("Simulated IOError")
 
