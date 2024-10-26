@@ -14,3 +14,158 @@
 2024-10-25 19:18:32,630 - INFO - Operation: divide, Operands: 100.0, 2.0, Result: 50.0
 2024-10-25 19:18:46,222 - INFO - Added history entry: exponent, 1.0, 2.0, 1.0
 2024-10-25 19:18:46,223 - INFO - Operation: exponent, Operands: 1.0, 2.0, Result: 1.0
+2024-10-25 19:37:15,801 - INFO - Loaded plugin: add
+2024-10-25 19:37:15,801 - INFO - Loaded plugin: subtract
+2024-10-25 19:37:15,801 - INFO - Loaded plugin: multiply
+2024-10-25 19:37:15,802 - INFO - Loaded plugin: squareroot
+2024-10-25 19:37:15,802 - INFO - Loaded plugin: divide
+2024-10-25 19:37:15,802 - INFO - Loaded plugin: exponent
+2024-10-25 19:37:15,803 - INFO - Loaded plugin: cube
+2024-10-25 19:37:15,803 - INFO - Loaded plugin: square
+2024-10-25 19:40:02,964 - INFO - Loaded plugin: add
+2024-10-25 19:40:02,964 - INFO - Loaded plugin: subtract
+2024-10-25 19:40:02,965 - INFO - Loaded plugin: multiply
+2024-10-25 19:40:02,965 - INFO - Loaded plugin: squareroot
+2024-10-25 19:40:02,965 - INFO - Loaded plugin: divide
+2024-10-25 19:40:02,966 - INFO - Loaded plugin: exponent
+2024-10-25 19:40:02,966 - INFO - Loaded plugin: cube
+2024-10-25 19:40:02,966 - INFO - Loaded plugin: square
+2024-10-25 19:41:12,905 - INFO - Loaded plugin: add
+2024-10-25 19:41:12,905 - INFO - Loaded plugin: subtract
+2024-10-25 19:41:12,905 - INFO - Loaded plugin: multiply
+2024-10-25 19:41:12,905 - INFO - Loaded plugin: squareroot
+2024-10-25 19:41:12,905 - INFO - Loaded plugin: divide
+2024-10-25 19:41:12,905 - INFO - Loaded plugin: exponent
+2024-10-25 19:41:12,905 - INFO - Loaded plugin: cube
+2024-10-25 19:41:12,905 - INFO - Loaded plugin: square
+2024-10-25 19:41:25,500 - INFO - Added history entry: add, 10.0, 7.0, 17.0
+2024-10-25 19:41:25,501 - INFO - Operation: add, Operands: 10.0, 7.0, Result: 17.0
+2024-10-25 19:41:55,143 - INFO - Added history entry: subtract, 10.0, 4.0, 6.0
+2024-10-25 19:41:55,143 - INFO - Operation: subtract, Operands: 10.0, 4.0, Result: 6.0
+2024-10-25 19:44:28,976 - INFO - Loaded plugin: add
+2024-10-25 19:44:28,977 - INFO - Loaded plugin: subtract
+2024-10-25 19:44:28,977 - INFO - Loaded plugin: multiply
+2024-10-25 19:44:28,977 - INFO - Loaded plugin: squareroot
+2024-10-25 19:44:28,977 - INFO - Loaded plugin: divide
+2024-10-25 19:44:28,977 - INFO - Loaded plugin: exponent
+2024-10-25 19:44:28,977 - INFO - Loaded plugin: cube
+2024-10-25 19:44:28,977 - INFO - Loaded plugin: square
+2024-10-25 19:45:20,032 - INFO - Loaded plugin: add
+2024-10-25 19:45:20,032 - INFO - Loaded plugin: subtract
+2024-10-25 19:45:20,033 - INFO - Loaded plugin: multiply
+2024-10-25 19:45:20,033 - INFO - Loaded plugin: squareroot
+2024-10-25 19:45:20,033 - INFO - Loaded plugin: divide
+2024-10-25 19:45:20,033 - INFO - Loaded plugin: exponent
+2024-10-25 19:45:20,033 - INFO - Loaded plugin: cube
+2024-10-25 19:45:20,033 - INFO - Loaded plugin: square
+2024-10-25 19:45:41,261 - INFO - Added history entry: add, 10.0, 8.0, 18.0
+2024-10-25 19:45:41,261 - INFO - Operation: add, Operands: 10.0, 8.0, Result: 18.0
+2024-10-25 19:46:01,950 - INFO - Added history entry: subtract, 90.0, 10.0, 80.0
+2024-10-25 19:46:01,951 - INFO - Operation: subtract, Operands: 90.0, 10.0, Result: 80.0
+2024-10-25 19:46:14,359 - INFO - Added history entry: divide, 100.0, 2.0, 50.0
+2024-10-25 19:46:14,359 - INFO - Operation: divide, Operands: 100.0, 2.0, Result: 50.0
+2024-10-25 19:46:24,843 - INFO - Added history entry: exponent, 3.0, 3.0, 27.0
+2024-10-25 19:46:24,844 - INFO - Operation: exponent, Operands: 3.0, 3.0, Result: 27.0
+2024-10-25 19:46:36,662 - INFO - Added history entry: square, 10.0, None, 100.0
+2024-10-25 19:46:36,662 - INFO - Operation: square, Operands: 10.0, None, Result: 100.0
+2024-10-25 19:46:45,585 - INFO - Added history entry: squareroot, 12.0, None, 3.4641016151377544
+2024-10-25 19:46:45,586 - INFO - Operation: squareroot, Operands: 12.0, None, Result: 3.4641016151377544
+2024-10-25 19:46:57,468 - INFO - Added history entry: cube, 6.0, None, 216.0
+2024-10-25 19:46:57,468 - INFO - Operation: cube, Operands: 6.0, None, Result: 216.0
+2024-10-25 19:47:38,773 - INFO - History saved.
+2024-10-25 19:48:04,253 - INFO - History file deleted.
+2024-10-25 19:48:17,981 - WARNING - No history file found.
+2024-10-25 19:59:01,198 - INFO - Initialized history file.
+2024-10-25 19:59:01,199 - INFO - Loaded plugin: add
+2024-10-25 19:59:01,199 - INFO - Loaded plugin: subtract
+2024-10-25 19:59:01,199 - INFO - Loaded plugin: multiply
+2024-10-25 19:59:01,199 - INFO - Loaded plugin: squareroot
+2024-10-25 19:59:01,199 - INFO - Loaded plugin: divide
+2024-10-25 19:59:01,199 - INFO - Loaded plugin: exponent
+2024-10-25 19:59:01,199 - INFO - Loaded plugin: cube
+2024-10-25 19:59:01,200 - INFO - Loaded plugin: square
+2024-10-25 19:59:20,597 - INFO - Added history entry: add, 10.0, 7.0, 17.0
+2024-10-25 19:59:20,597 - INFO - Operation: add, Operands: 10.0, 7.0, Result: 17.0
+2024-10-25 19:59:37,752 - INFO - Added history entry: subtract, 100.0, 8.0, 92.0
+2024-10-25 19:59:37,753 - INFO - Operation: subtract, Operands: 100.0, 8.0, Result: 92.0
+2024-10-25 19:59:50,485 - INFO - Added history entry: divide, 100.0, 8.0, 12.5
+2024-10-25 19:59:50,485 - INFO - Operation: divide, Operands: 100.0, 8.0, Result: 12.5
+2024-10-25 19:59:55,257 - INFO - Added history entry: cube, 8.0, None, 512.0
+2024-10-25 19:59:55,257 - INFO - Operation: cube, Operands: 8.0, None, Result: 512.0
+2024-10-25 20:00:03,399 - INFO - Added history entry: exponent, 12.0, 2.0, 144.0
+2024-10-25 20:00:03,399 - INFO - Operation: exponent, Operands: 12.0, 2.0, Result: 144.0
+2024-10-25 20:00:16,559 - INFO - Added history entry: square, 2.0, None, 4.0
+2024-10-25 20:00:16,559 - INFO - Operation: square, Operands: 2.0, None, Result: 4.0
+2024-10-25 20:00:24,232 - INFO - Added history entry: squareroot, 2.0, None, 1.4142135623730951
+2024-10-25 20:00:24,232 - INFO - Operation: squareroot, Operands: 2.0, None, Result: 1.4142135623730951
+2024-10-25 20:00:39,594 - INFO - Added history entry: multiply, 10.0, 800.0, 8000.0
+2024-10-25 20:00:39,594 - INFO - Operation: multiply, Operands: 10.0, 800.0, Result: 8000.0
+2024-10-25 20:01:05,057 - INFO - History saved.
+2024-10-25 20:01:41,376 - INFO - Cleared history file.
+2024-10-25 20:01:48,866 - INFO - Added history entry: add, 80.0, 7.0, 87.0
+2024-10-25 20:01:48,866 - INFO - Operation: add, Operands: 80.0, 7.0, Result: 87.0
+2024-10-25 20:01:58,771 - INFO - History file deleted.
+2024-10-25 20:02:07,528 - WARNING - No history file found.
+2024-10-25 20:02:11,811 - INFO - Added history entry: add, 7.0, 3.0, 10.0
+2024-10-25 20:02:11,811 - INFO - Operation: add, Operands: 7.0, 3.0, Result: 10.0
+2024-10-25 20:02:20,812 - INFO - History saved.
+2024-10-25 20:03:53,401 - INFO - Loaded plugin: add
+2024-10-25 20:03:53,402 - INFO - Loaded plugin: subtract
+2024-10-25 20:03:53,402 - INFO - Loaded plugin: multiply
+2024-10-25 20:03:53,402 - INFO - Loaded plugin: squareroot
+2024-10-25 20:03:53,402 - INFO - Loaded plugin: divide
+2024-10-25 20:03:53,402 - INFO - Loaded plugin: exponent
+2024-10-25 20:03:53,402 - INFO - Loaded plugin: cube
+2024-10-25 20:03:53,402 - INFO - Loaded plugin: square
+2024-10-25 20:04:18,363 - INFO - Added history entry: add, 100.0, 70.0, 170.0
+2024-10-25 20:04:18,364 - INFO - Operation: add, Operands: 100.0, 70.0, Result: 170.0
+2024-10-25 20:04:27,912 - INFO - Added history entry: subtract, 100.0, 89.0, 11.0
+2024-10-25 20:04:27,912 - INFO - Operation: subtract, Operands: 100.0, 89.0, Result: 11.0
+2024-10-25 20:06:06,487 - INFO - Loaded plugin: add
+2024-10-25 20:06:06,487 - INFO - Loaded plugin: subtract
+2024-10-25 20:06:06,487 - INFO - Loaded plugin: multiply
+2024-10-25 20:06:06,487 - INFO - Loaded plugin: squareroot
+2024-10-25 20:06:06,487 - INFO - Loaded plugin: divide
+2024-10-25 20:06:06,487 - INFO - Loaded plugin: exponent
+2024-10-25 20:06:06,488 - INFO - Loaded plugin: cube
+2024-10-25 20:06:06,488 - INFO - Loaded plugin: square
+2024-10-25 20:06:27,304 - INFO - Added history entry: add, 100.0, 10.0, 110.0
+2024-10-25 20:06:27,305 - INFO - Operation: add, Operands: 100.0, 10.0, Result: 110.0
+2024-10-25 20:06:34,496 - INFO - Added history entry: subtract, 79.0, 6.0, 73.0
+2024-10-25 20:06:34,497 - INFO - Operation: subtract, Operands: 79.0, 6.0, Result: 73.0
+2024-10-25 20:06:39,310 - INFO - Added history entry: divide, 100.0, 2.0, 50.0
+2024-10-25 20:06:39,311 - INFO - Operation: divide, Operands: 100.0, 2.0, Result: 50.0
+2024-10-25 20:06:48,994 - INFO - Added history entry: multiply, 8.0, 2.0, 16.0
+2024-10-25 20:06:48,994 - INFO - Operation: multiply, Operands: 8.0, 2.0, Result: 16.0
+2024-10-25 20:06:52,909 - INFO - Added history entry: cube, 80.0, None, 512000.0
+2024-10-25 20:06:52,909 - INFO - Operation: cube, Operands: 80.0, None, Result: 512000.0
+2024-10-25 20:07:04,094 - INFO - Added history entry: exponent, 8.0, 2.0, 64.0
+2024-10-25 20:07:04,095 - INFO - Operation: exponent, Operands: 8.0, 2.0, Result: 64.0
+2024-10-25 20:07:25,918 - INFO - History saved.
+2024-10-25 20:07:41,487 - INFO - Cleared history file.
+2024-10-25 20:25:12,359 - INFO - Loaded plugin: add
+2024-10-25 20:25:12,360 - INFO - Loaded plugin: subtract
+2024-10-25 20:25:12,360 - INFO - Loaded plugin: multiply
+2024-10-25 20:25:12,360 - INFO - Loaded plugin: squareroot
+2024-10-25 20:25:12,360 - INFO - Loaded plugin: divide
+2024-10-25 20:25:12,360 - INFO - Loaded plugin: exponent
+2024-10-25 20:25:12,360 - INFO - Loaded plugin: cube
+2024-10-25 20:25:12,360 - INFO - Loaded plugin: square
+2024-10-25 20:25:38,889 - INFO - Added history entry: add, 100.0, 8.0, 108.0
+2024-10-25 20:25:38,890 - INFO - Operation: add, Operands: 100.0, 8.0, Result: 108.0
+2024-10-25 20:25:55,866 - INFO - Added history entry: subtract, 100.0, 9.0, 91.0
+2024-10-25 20:25:55,867 - INFO - Operation: subtract, Operands: 100.0, 9.0, Result: 91.0
+2024-10-25 20:26:20,124 - INFO - Added history entry: multiply, 8.0, 7.0, 56.0
+2024-10-25 20:26:20,124 - INFO - Operation: multiply, Operands: 8.0, 7.0, Result: 56.0
+2024-10-25 20:26:23,963 - INFO - Added history entry: cube, 7.0, None, 343.0
+2024-10-25 20:26:23,963 - INFO - Operation: cube, Operands: 7.0, None, Result: 343.0
+2024-10-25 20:26:29,154 - INFO - Added history entry: divide, 100.0, 7.0, 14.285714285714286
+2024-10-25 20:26:29,154 - INFO - Operation: divide, Operands: 100.0, 7.0, Result: 14.285714285714286
+2024-10-25 20:26:36,345 - INFO - Added history entry: exponent, 28.0, 32.0, 2.0373094654699867e+46
+2024-10-25 20:26:36,345 - INFO - Operation: exponent, Operands: 28.0, 32.0, Result: 2.0373094654699867e+46
+2024-10-25 20:26:41,661 - INFO - Added history entry: square, 28.0, None, 784.0
+2024-10-25 20:26:41,661 - INFO - Operation: square, Operands: 28.0, None, Result: 784.0
+2024-10-25 20:26:47,524 - INFO - Added history entry: add, 90000.0, 246983.0, 336983.0
+2024-10-25 20:26:47,524 - INFO - Operation: add, Operands: 90000.0, 246983.0, Result: 336983.0
+2024-10-25 20:27:15,106 - INFO - History saved.
+2024-10-25 20:27:25,952 - INFO - Cleared history file.
