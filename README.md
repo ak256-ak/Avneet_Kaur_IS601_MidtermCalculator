@@ -163,6 +163,54 @@ Ensure you have the following installed:
  
  The calculator log file will be created as calculator.log in the project directory.
  
+________________________________________________________________________________________________________________________________________________________
+
+# Project Design Overview
+
+# Design Patterns
+
+# Factory Pattern:
+
+The factory pattern is used for dynamically loading plugins in the `Calculator` class, allowing the calculator to load operations without modifying the core code.
+
+https://github.com/ak256-ak/Avneet_Kaur_IS601_MidtermCalculator/blob/main/calculator/calculator.py#L33
+
+# Command Pattern:
+
+The command pattern structures REPL commands, enabling consistent handling of operations like add, subtract, and history management. 
+
+https://github.com/ak256-ak/Avneet_Kaur_IS601_MidtermCalculator/blob/main/calculator/calculator.py#L55
+
+# Facade Pattern:
+
+The facade pattern in `history_manager.py` provides a simplified interface for managing history operations
+
+https://github.com/ak256-ak/Avneet_Kaur_IS601_MidtermCalculator/blob/main/calculator/history_manager.py#L15
+
+# Environment Variables:
+
+Environment variables like `LOG_LEVEL` and `LOG_FILE` are used for dynamically configuring logging behavior, setting the logging level and specifying the log file.
+
+https://github.com/ak256-ak/Avneet_Kaur_IS601_MidtermCalculator/blob/main/calculator/calculator.py#L10
+
+# Logging Implementation:
+
+Python's logging module is used to record events, errors, and information, dynamically configured via environment variables. Logs are recorded in calculator.log. 
+
+https://github.com/ak256-ak/Avneet_Kaur_IS601_MidtermCalculator/blob/main/calculator/calculator.py#L12
+
+https://github.com/ak256-ak/Avneet_Kaur_IS601_MidtermCalculator/blob/main/calculator/history_manager.py#L18
+
+# Try Implementation for LBYL and EAFP: 
+
+LBYL (Look Before You Leap): Conditions are checked before performing an action, like verifying file existence before reading. 
+
+https://github.com/ak256-ak/Avneet_Kaur_IS601_MidtermCalculator/blob/main/calculator/history_manager.py#L50
+
+EAFP  EAFP is used to handle unexpected errors by trying an operation and catching exceptions. 
+
+https://github.com/ak256-ak/Avneet_Kaur_IS601_MidtermCalculator/blob/main/calculator/calculator.py#L180
+
 
 
 
